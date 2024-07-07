@@ -1,0 +1,74 @@
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar .toggle-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .navbar .nav-links li {
+    width: 100%;
+  }
+  
+  .navbar .nav-links li a {
+    display: block;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .navbar .nav-links li a:hover {
+    background-color: #575757;
+  }
+  
+  .navbar.open .nav-links {
+    display: flex;
+  }
+  
+  .navbar .link-style {
+    /* Add your custom link styles here */
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar .link-style:hover {
+    background-color: #575757;
+  }
+  
+  @media (min-width: 768px) {
+    .navbar {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    .navbar .toggle-button {
+      display: none;
+    }
+  
+    .navbar .nav-links {
+      flex-direction: row;
+      width: auto;
+    }
+  
+    .navbar .nav-links li {
+      width: auto;
+    }
+  }
+  
