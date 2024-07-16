@@ -1,0 +1,171 @@
+body {
+    font-family: "Poppins", sans-serif;
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: center;
+    padding: 20px;
+    background-color: hsl(249, 72%, 14%);
+    border-radius: 10px;
+    flex-direction: column;
+    margin-top: -10px;
+    color: rgb(217, 202, 202);
+  }
+  .text-content {
+    max-width:600px;
+    margin-right: auto;
+    margin-top: 50px;
+  }
+  .title {
+    font-size: 2.7em;
+    margin-bottom: 10px;
+    animation: fadeIn 2s ease-in-out;
+    letter-spacing: 1px;
+    font-weight: bold;
+  }
+  .description {
+    font-size: 1.2em;
+    color:blue;
+    font-weight: bold;
+  }
+  
+  .role {
+    display: inline-block;
+    animation: fadeRole 2s ease-in-out 2;
+    color:rgb(246, 8, 210);
+    font-weight: bold;
+    font-size: 30px;
+    
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+      50%{
+        opacity: 0.5;
+        transform: none;
+      }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeRole {
+    0%, 25% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    50%, 100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+button#know-me{
+    background:linear-gradient(to right, rgb(181, 61, 153) , rgb(58, 58, 174),rgb(62, 202, 202));
+    color: rgb(237, 235, 235);
+    font-weight: bold;
+    font-size: large;
+    padding: 8px;
+    margin: 20px;
+    width: 150px;
+    border: none;
+    text-align: center;
+}
+button#know-me:hover{
+    cursor: pointer;
+    animation: buttonMore 4s;
+    
+}
+.MoreAbout{
+    font-size: 18px;
+    letter-spacing: 1px;
+    background-color: hsl(249, 72%, 14%);
+    color: #0f0e0e; /* darker text color */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 340px;
+    margin: 20px;
+}
+@keyframes buttonMore {
+  0%{opacity:0.4;}
+  50%{opacity: 0.6;}
+  100%{opacity: 1;}
+  
+}
+@media (max-width: 768px) {
+  *{
+    font-size: 14px;
+  }
+  .MoreAbout{
+    height: auto;
+  }
+}
+
+/*SKILLS PAGE STYLING*/
+.skills-page {
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(251, 93%, 6%); /* slightly duller background */
+  color: rgb(231, 221, 221);
+  font-weight: 200;
+  padding: 10px;
+}
+
+.title1 {
+  text-align: left;
+  font-size: 2.7em;
+  color: #fff; /* dull accent color */
+  margin-bottom: 20px;
+  font-weight: bold;
+  background-color: hsl(249, 72%, 14%);
+
+}
+
+.skills-section {
+  background-color: hsl(249, 72%, 14%); /* slightly duller background */
+  display: flex;
+  flex-direction: row;
+  padding: 50px;
+  padding-top: 0;
+}
+
+.skills-section h2 {
+  font-size: 1.5em;
+  color: rgb(210, 25, 127); /* darker text color */
+  margin-bottom: 10px;
+  text-align: left;
+  
+}
+
+.skills-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills-section li {
+  background-color: hsl(249, 72%, 14%); /* dull background */
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  text-align: left;
+}
+
+@media (max-width: 600px) {
+  .skills-section {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 2em;
+  }
+
+  .skills-section h2 {
+    font-size: 1.2em;
+  }
+}

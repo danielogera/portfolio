@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import './Navbar.css';
+import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,18 +11,17 @@ function Navbar() {
   };
 
   return (
-    <nav className={`navbar ${isOpen ? 'open' : ''}`}>
-      <button className="toggle-button" onClick={toggleNavbar}>
-        ☰
-      </button>
+    <nav className={`navbar ${isOpen ? 'open' : 'close'}`}>
+      <button className="toggle-button" onClick={toggleNavbar}>☰</button>
       <ul className="nav-links">
-        <li><Link to="/" className="link-style">About</Link></li>
-        <li><Link to="/portfolio" className="link-style">Portfolio</Link></li>
-        <li><Link to="/skills" className="link-style">Skills</Link></li>
-        <li><Link to="/experience" className="link-style">Experience</Link></li>
-        <li><Link to="/education" className="link-style">Education</Link></li>
-        <li><Link to="/contact" className="link-style">Contact</Link></li>
-        <li><a href="#blog" className="link-style">Blog</a></li> {/* Example of external link */}
+        <li><Link to='/' id="title"><img src='./src/assets/Images/new_logo.ico' alt='logo' id='logo'/>DANIEL</Link></li>
+        <li><NavLink to="/about" className="link-style">About</NavLink></li>
+        <li><NavLink to="/skills" className="link-style">Skills</NavLink></li>
+        <li><NavLink to="/experience" className="link-style">Experience</NavLink></li>
+        <li><NavLink to="/education" className="link-style">Education</NavLink></li>
+        <li><NavLink to="/projects" className="link-style">Projects</NavLink></li>
+        <li><NavLink to="/contact" className="link-style">Contact</NavLink></li>
+        <li><NavLink to="/certificates" className="link-style">Certificates</NavLink></li>
       </ul>
     </nav>
   );

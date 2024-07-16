@@ -1,33 +1,37 @@
 import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import {Header} from './components/Header';
-import {About} from './components/About';
-import {Projects} from './components/Projects';
-import {Skills} from './components/Skills';
-import {Experience} from './components/Experience';
-import {Education} from './components/Education';
-import {Contact} from './components/Contact';
-import {Footer} from './components/Footer';
-import {Blog} from './components/Blog';
+// Pages
+import About from './pages/About';
+import Projects from './pages/Projects';
+import Skills from './pages/Skills';
+import Experience from './pages/Experience';
+import Education from './pages/Education';
+import Contact from './pages/Contact';
+import Certificates from './pages/Certificates';
+import NotFound from './pages/NotFound';
+
+// Components
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Header />
+        <Navbar />
         <main>
           <Routes>
-            <Route path="/" exact component={About} />
-            <Route path="/Projects" component={Projects} />
-            <Route path="/skills" component={Skills} />
-            <Route path="/experience" component={Experience} />
-            <Route path="/education" component={Education} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/blog" Component={Blog}/>
+            <Route path='/' index element={<About/>}/>
+            <Route path="/about" element={<About/>} />
+            <Route path="/Projects" element={<Projects/>} />
+            <Route path="/skills" element={<Skills/>} />
+            <Route path="/experience" element={<Experience/>} />
+            <Route path="/education" element={<Education/>} />
+            <Route path="/contact" element={<Contact/>} />
+            <Route path="/certificates" element={<Certificates/>} />
+            <Route path='*' element={<NotFound/>} />
           </Routes>
         </main>
-        <Footer />
       </div>
     </Router>
   );
