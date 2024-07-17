@@ -54,7 +54,6 @@ body {
       transform: translateY(0);
     }
   }
-  
   @keyframes fadeRole {
     0%, 25% {
       opacity: 0;
