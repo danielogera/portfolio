@@ -16,12 +16,10 @@ const SectionContainer = styled.div`
     text-align: center;
   }
 `;
-
 const Image = styled.img`
   max-width: 40%;
   height: auto;
   diplay:flex;
-
 
   @media (max-width: 768px) {
     max-width: 100%;

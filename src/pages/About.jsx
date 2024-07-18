@@ -10,8 +10,9 @@ const roles = [
   "Project Manager"
 ];
 
+const quote = 'The journey to success starts with one step.';
 function App() {
-  const [isVisible, setIsVisible] = useState(false); // State to toggle visibility of the MoreAbout component
+  const [isVisible, setIsVisible] = useState(true); // State to toggle visibility of the MoreAbout component
   const [currentRole, setCurrentRole] = useState(0); // State to keep track of the current role displayed
 
   useEffect(() => {
@@ -32,7 +33,7 @@ function App() {
     <div className="container">
       <div className="text-content">
         <p className="title" style={{color:"aqua"}}>Daniel Ogera Ongaki</p> {/* User's name */}
-        <p className="title">Welcome to my website. This is where collaboration happens</p>
+        <p className="title">{quote}</p>
         <p className="description"><span className="role">{roles[currentRole]}</span></p> {/* Rotating role */}
       </div>
       <button id='know-me' onClick={toggleVisibility}>{isVisible ? 'Less' : 'More'}</button> {/* Toggle button */}

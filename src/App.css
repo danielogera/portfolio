@@ -12,7 +12,6 @@ body{
     -moz-osx-font-smoothing: grayscale;
     background: fixed;
     background-color: hsl(249, 72%, 14%); /* slightly duller background */
-    
   }
   
   .App {

@@ -20,7 +20,11 @@
   width: auto;
   height: auto;
   text-align: left;
-  color: #fff;
+  /* ADDING COLOR GRADIENT TO TEXT*/
+  background: linear-gradient(to right, rgb(189, 7, 144), rgb(213, 180, 180));
+  background-clip: border-box;
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
 }
 
 #title:hover {
